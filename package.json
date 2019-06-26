@@ -10,13 +10,6 @@
     "license": "MIT",
     "scripts": {
         "start": "UV_THREADPOOL_SIZE=128 webpack-dev-server",
-        "start-mock": "wiremock-launcher --port 8888 --root-dir mock",
-        "release": "UV_THREADPOOL_SIZE=128 NODE_ENV=production webpack --bail",
-        "test": "yarn test-cov && yarn lint",
-        "test-cov": "NODE_ENV=coverage nyc yarn test-js-once",
-        "test-cov-ci": "NODE_ENV=coverage nyc yarn test-js-once",
-        "test-js": "mocha-webpack --watch",
-        "test-js-once": "mocha-webpack",
         "lint": "eslint app"
     },
     "devDependencies": {
