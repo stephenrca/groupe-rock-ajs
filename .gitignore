@@ -1,0 +1,22 @@
+# Eclipse
+.project
+.settings
+.classpath
+
+# IntelliJ
+*.iml
+.idea
+
+# Maven
+target
+
+# NPM / webpack / ...
+.nyc_output
+coverage
+dist
+mock/__files
+node_modules
+webpack.config.dev.js
+package-lock.json
+npm-*.log
+yarn-*.log

@@ -1,0 +1,4 @@
+--colors
+--webpack-config test/webpack.config.babel.js
+--include ./test/test-helpers.js
+./app/**/__tests__/**/*.js

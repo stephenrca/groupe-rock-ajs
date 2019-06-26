@@ -1,0 +1,33 @@
+stages:
+  - build
+  - publish
+
+npm_build:
+  stage: build
+  image: git.int.rcacloud.it:4567/docker-infra/node:v8-11-3-1
+  script:
+    - node -v
+    - yarn -v
+    - yarn --frozen-lockfile
+    - yarn test-ci
+    - yarn release
+  tags:
+    - kubernetes
+  except:
+    - tags
+
+npm_publish:
+  stage: publish
+  image: git.int.rcacloud.it:4567/docker-infra/node:v8-11-3-1
+  script:
+    - node -v
+    - yarn -v
+    - npm -v
+    - yarn --frozen-lockfile
+    - yarn test-ci
+    - yarn release
+    - npm publish
+  tags:
+    - kubernetes
+  only:
+    - tags

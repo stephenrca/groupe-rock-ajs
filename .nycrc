@@ -1,0 +1,15 @@
+{
+    "lines": 90,
+    "checkCoverage": true,
+    "reporter": [
+        "lcov",
+        "html",
+        "text",
+        "text-summary"
+    ],
+    "include": [
+        "app/**/*.js"
+    ],
+    "instrument": false,
+    "sourceMap": false
+}
